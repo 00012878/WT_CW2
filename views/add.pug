@@ -1,0 +1,48 @@
+extends layout.pug 
+
+block content
+    main.add_page
+        h2 Add new student to the database record
+        form.add_form(action="/add" method="POST")
+            label First Name
+            br
+            input(type="text" name="fname")
+            br
+            br
+            label Last Name
+            br
+            input(type="text" name="lname")
+            br
+            br
+            //- label Student ID
+            //- br
+            //- input(type="number" name="sid")
+            //- br
+            //- br
+            label Major of Science
+            br
+            select(name="major")
+                option(value="cs") Computer Science
+                option(value="fin") Finance 
+                option(value="law") Commercial Law 
+                option(value="bio") Bio Engineering  
+            //- input(type="text" name="major")
+            br
+            br
+            label Level
+            br
+            select(name="level")
+                option(value="1") First Year
+                option(value="2") Second Year
+                option(value="3") Third Year
+                option(value="4") Fourth Year
+            
+            br
+            br
+            button.add_btn Add
+
+        if error
+            p.error [Error]: Fields cannot be empty
+        if success
+            p.success Record saved successfully
+

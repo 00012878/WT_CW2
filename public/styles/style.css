@@ -1,0 +1,176 @@
+/* global style */
+* {margin: 0; padding: 0;}
+
+a {
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: bold;
+    transition: color .15s ease-in-out;
+    color: black;
+}
+
+a:hover {
+    color: #089400; /* dark green */
+}
+
+/* index (home) page style */
+header {
+    display: flex; 
+    flex-wrap: wrap;
+    margin-bottom: 10vh;
+}
+
+#dis {
+    font-family: Ubuntu, Times, serif; 
+    font-size: 1.2vw; 
+    background-color: yellow;
+    border: .2vw solid black;
+    text-align: center;
+    width: 100vw;
+    margin-bottom: 2vh;
+}
+
+.title {
+    font-family: Ubuntu, Times, serif;
+    font-size: 2vw;
+    text-align: center;
+    height: 6vh;
+    width: 100vw;
+    /* border-bottom: .2vw solid  black;  */
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    border-bottom: 2px solid grey;
+    width: 100vw;
+}
+
+header nav a {
+    font-size: 1.3vw;
+    /* border: 2px solid red; */
+    margin: 1vh 2vw 3vh;
+}
+
+
+main {
+    /* border: 2px solid green; */
+}
+
+main h2 {
+    font-family: Ubuntu, Times, serif;
+    font-size: 2.3vw;
+    padding: 0 2vw;
+    margin-bottom: 5vh;
+}
+
+main a {
+    font-size: 1.2vw;
+    background-color: lightgray;
+    border: .2vw solid black;
+    text-decoration: none;
+    margin: 0 2vw;
+    padding: 0 1vw;
+}
+
+/* add.pug styles */
+main.add_page {
+    border: 2px solid red;
+}
+
+form.add_form {
+    margin: 0 5vw;
+    border: 1px solid blue;
+}
+
+form.add_form label {
+    font-family: Ubuntu, Times, serif;
+    font-size: 1.3vw;
+    font-weight: bold;
+}
+
+form.add_form input, form.add_form select {
+    font-family: "Ubuntu Mono", monospace;
+}
+
+button.add_btn {
+    margin: 3vh 0;
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 1.3vw;
+    width: 6vw;
+    height: 6vh;
+    background-color: lightgray;
+    border: .2vw solid black;
+    font-weight: bold;
+    transition: color .15s ease-in-out;
+}
+
+button.add_btn:hover {
+    cursor: pointer;
+    color: #089400;
+}
+
+p.error, p.success {
+    font-family: Ubuntu, Times, serif;
+    font-size: 1.3vw;
+    font-weight: bold;
+    margin: 0 5vw;
+}
+
+p.success {
+    color: green;
+}
+p.error {
+    color: red;
+}
+/* students.pug styles */
+main.students_page {
+    border: 2px solid red;
+    padding-top: 3vh;
+}
+
+div.student_wrapper {
+    border: 2px solid blue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5vh 20vw;
+}
+
+div.student_item {
+    border-bottom: .2vw dashed darkgray;
+    margin-bottom: 2.5vh;
+    padding-bottom: 1.5vh;
+}
+div.student_item a.student {
+    display: inline-block;
+    width: 25vw;
+    font-family: Ubuntu, Times, serif;
+    font-size: 1.5vw;
+}
+
+div.student_item a.delete {
+    display: inline-block;
+    width: 5vw;
+    background-color: lightgray;
+    border: .2vw solid black;
+    font-weight: bold;
+    transition: color .15s ease-in-out;
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 1.2vw;
+}
+div.student_item a.delete:hover {
+    color: #089400;
+}
+
+div.student_wrapper a {
+    background-color: unset;
+    border: unset;
+    font-family: unset;
+    margin: 0;
+}
+
+div.student_wrapper a:hover {
+    color: unset;
+}
+

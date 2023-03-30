@@ -1,0 +1,10 @@
+extends layout.pug 
+block content
+    main.students_page
+        h2 Students
+
+        div.student_wrapper
+            each student in students
+                div.student_item
+                    a.student(href=`/students/${student.id}`)= student.fname + " " + student.lname
+                    a.delete(href="#") delete
