@@ -1,6 +1,11 @@
 extends layout.pug 
 
 block content
+    header
+        h2.title Student Database Management
+        nav
+            a(href="/") Home
+            a(href="/students") View All Students
     main.add_page
         h2 Add new student to the database record
         form.add_form(action="/add" method="POST")
@@ -14,11 +19,14 @@ block content
             input(type="text" name="lname")
             br
             br
-            //- label Student ID
-            //- br
-            //- input(type="number" name="sid")
-            //- br
-            //- br
+            label Sex
+            br
+            select(name="sex")
+                option(value="0") Male
+                option(value="1") Female
+                option(value="2") Undisclosed
+            br
+            br
             label Major of Science
             br
             select(name="major")
@@ -41,8 +49,8 @@ block content
             br
             button.add_btn Add
 
-        if error
-            p.error [Error]: Fields cannot be empty
-        if success
-            p.success Record saved successfully
+            if error
+                p.error [Error]: "First name" and "Last name" fields cannot be empty
+            if success
+                p.success Student successfully added to the database
 

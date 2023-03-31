@@ -53,10 +53,6 @@ header nav a {
 }
 
 
-main {
-    /* border: 2px solid green; */
-}
-
 main h2 {
     font-family: Ubuntu, Times, serif;
     font-size: 2.3vw;
@@ -65,6 +61,11 @@ main h2 {
 }
 
 main a {
+    /* display: flex;
+    height: 8vh;
+    width: 15vw;
+    align-items: center;
+    justify-content: center; */
     font-size: 1.2vw;
     background-color: lightgray;
     border: .2vw solid black;
@@ -73,24 +74,27 @@ main a {
     padding: 0 1vw;
 }
 
-/* add.pug styles */
-main.add_page {
+/* add.pug and detail.pug (update) styles */
+main.add_page, main.update_page {
     border: 2px solid red;
 }
 
-form.add_form {
+form.add_form, form.update_form {
     margin: 0 5vw;
     border: 1px solid blue;
 }
 
-form.add_form label {
+form.add_form label, form.update_form label {
     font-family: Ubuntu, Times, serif;
     font-size: 1.3vw;
     font-weight: bold;
 }
 
-form.add_form input, form.add_form select {
+form.add_form input, form.add_form select, form.update_form input, form.update_form select {
     font-family: "Ubuntu Mono", monospace;
+    width: 15vw;
+    height: 3.5vh;
+    font-size: 1vw;
 }
 
 button.add_btn {
@@ -115,6 +119,7 @@ p.error, p.success {
     font-size: 1.3vw;
     font-weight: bold;
     margin: 0 5vw;
+    display: inline;
 }
 
 p.success {
@@ -174,3 +179,24 @@ div.student_wrapper a:hover {
     color: unset;
 }
 
+a.student {
+    transition: background-color .2s ease-in-out;
+}
+a.student:hover {
+    color: #089400;
+    background-color: lightgray;
+}
+
+p.update {
+    text-align: center;
+    font-family: Ubuntu, Times, serif;
+    font-size: 1.5vw;
+    color: #089400;
+}
+
+p.info {
+    font-family: Ubuntu, Times, serif;
+    font-size: 1.5vw;
+    padding: 0 2vw;
+    margin-bottom: 5vh; 
+}

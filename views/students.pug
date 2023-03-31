@@ -1,10 +1,20 @@
 extends layout.pug 
 block content
+    header
+        h2.title Student Database Management
+        nav
+            a(href="/") Home
+            a(href="/students") View All Students
+            a(href="/add") Add Student
     main.students_page
         h2 Students
-
+        p.info Click on student's name to edit and view detailed information
+        if updated
+            p.update Student record updated successfully
+        if deleted
+            p.update Student record deleted successfully
         div.student_wrapper
             each student in students
                 div.student_item
                     a.student(href=`/students/${student.id}`)= student.fname + " " + student.lname
-                    a.delete(href="#") delete
+                    a.delete(href=`${student.id}/delete`) delete

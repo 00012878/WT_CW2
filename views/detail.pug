@@ -1,4 +1,93 @@
 extends layout.pug 
 
-block content 
-    div Hello friend
+block content
+    header
+        h2.title Student Database Management
+        nav
+            a(href="/students") Home
+            a(href="/students") View All Students
+            a(href="/add") Add Student
+    main.update_page
+        h2 Edit student record
+        form.update_form(action=`/${student.id}/update` method="POST")
+            label First Name
+            br
+            input(type="text" name="fname" value=`${student.fname}`)
+            br
+            br
+            label Last Name
+            br
+            input(type="text" name="lname" value=`${student.lname}`)
+            br
+            br
+            label Sex
+            br
+            select(name="sex")
+                if student.sex === "0"
+                    option(value="0" selected) Male
+                    option(value="1") Female
+                    option(value="2") Undisclosed
+                else if student.sex === "1"
+                    option(value="0") Male
+                    option(value="1" selected) Female
+                    option(value="2") Undisclosed
+                else
+                    option(value="0") Male
+                    option(value="1") Female
+                    option(value="2" selected) Undisclosed
+            br
+            br
+            label Major of Science
+            br
+            select(name="major")
+                if student.major === "cs"
+                    option(value="cs" selected) Computer Science
+                    option(value="fin") Finance 
+                    option(value="law") Commercial Law 
+                    option(value="bio") Bio Engineering
+                else if student.major === "fin"
+                    option(value="cs") Computer Science
+                    option(value="fin" selected) Finance 
+                    option(value="law") Commercial Law 
+                    option(value="bio") Bio Engineering
+                else if student.major === "law"
+                    option(value="cs") Computer Science
+                    option(value="fin") Finance 
+                    option(value="law" selected) Commercial Law 
+                    option(value="bio") Bio Engineering
+                else if student.major === "bio"
+                    option(value="cs") Computer Science
+                    option(value="fin") Finance 
+                    option(value="law") Commercial Law 
+                    option(value="bio" selected) Bio Engineering  
+            br
+            br
+            label Level
+            br
+            select(name="level")
+                if student.level === "1"
+                    option(value="1" selected) First Year
+                    option(value="2") Second Year
+                    option(value="3") Third Year
+                    option(value="4") Fourth Year
+                else if student.level === "2"
+                    option(value="1") First Year
+                    option(value="2" selected) Second Year
+                    option(value="3") Third Year
+                    option(value="4") Fourth Year
+                else if student.level === "3"
+                    option(value="1") First Year
+                    option(value="2") Second Year
+                    option(value="3" selected) Third Year
+                    option(value="4") Fourth Year
+                else if student.level === "4"
+                    option(value="1") First Year
+                    option(value="2") Second Year
+                    option(value="3") Third Year
+                    option(value="4" selected) Fourth Year    
+            br
+            br
+            button.add_btn Edit
+            a.delete(href=`/${student.id}/delete`) delete
+            if error
+                p.error [Error]: "First name" and "Last name" fields cannot be empty
