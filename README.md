@@ -14,7 +14,7 @@ There is no actual database, and the app imitates working with database by perfo
 CSS is stored in `public/` folder and it is encouraged to store additional client-side js, css and media files in that folder accordingly.<br><br>
 
 `routes/students.js` handles route requests.<br><br>
-All rendering templates are stured in `views/` folder.<br><br>
+All rendering templates are stored in `views/` folder.<br><br>
 
 Back-end is built with the help of [Express](https://expressjs.com/).<br>
 To make the app dynamic, [Pug](https://pugjs.org) is used.<br>
