@@ -19,9 +19,10 @@ header {
     margin-bottom: 10vh;
 }
 
+
 #dis {
     font-family: Ubuntu, Times, serif; 
-    font-size: 1.2vw; 
+    font-size: 1.2vw;
     background-color: yellow;
     border: .2vw solid black;
     text-align: center;
@@ -42,7 +43,7 @@ header nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    border-bottom: 2px solid grey;
+    border-bottom: .2vw solid grey;
     width: 100vw;
 }
 
@@ -53,19 +54,19 @@ header nav a {
 }
 
 
-main h2 {
+main.home_page h2 {
     font-family: Ubuntu, Times, serif;
     font-size: 2.3vw;
     padding: 0 2vw;
     margin-bottom: 5vh;
 }
 
-main a {
-    /* display: flex;
+main.home_page a {
+    display: flex;
     height: 8vh;
     width: 15vw;
     align-items: center;
-    justify-content: center; */
+    justify-content: center;
     font-size: 1.2vw;
     background-color: lightgray;
     border: .2vw solid black;
@@ -75,13 +76,13 @@ main a {
 }
 
 /* add.pug and detail.pug (update) styles */
-main.add_page, main.update_page {
+/* main.add_page, main.update_page {
     border: 2px solid red;
-}
+} */
 
 form.add_form, form.update_form {
     margin: 0 5vw;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 form.add_form label, form.update_form label {
@@ -97,6 +98,12 @@ form.add_form input, form.add_form select, form.update_form input, form.update_f
     font-size: 1vw;
 }
 
+div.update_page_btn_container {
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+}
+
 button.add_btn {
     margin: 3vh 0;
     font-family: "Ubuntu Mono", monospace;
@@ -107,6 +114,28 @@ button.add_btn {
     border: .2vw solid black;
     font-weight: bold;
     transition: color .15s ease-in-out;
+}
+
+main.update_page h2, main.add_page h2 {
+    margin-bottom: 5vh;
+    font-size: 1.7vw;
+    font-family: Ubuntu, Times, serif;
+    padding: 0 2vw;
+}
+
+main.update_page a.delete {
+    font-family: "Ubuntu Mono", monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5vw;
+    height: 5vh;
+    font-size: 1.3vw;
+    background-color: lightgray;
+    border: .2vw solid black;
+    text-decoration: none;
+    margin: 0 2vw;
+    padding: 0 1vw;
 }
 
 button.add_btn:hover {
@@ -128,14 +157,37 @@ p.success {
 p.error {
     color: red;
 }
+
 /* students.pug styles */
 main.students_page {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     padding-top: 3vh;
 }
 
+main.students_page a {
+    /* display: flex;
+    height: 8vh;
+    width: 15vw;
+    align-items: center;
+    justify-content: center; */
+    font-size: 1.2vw;
+    background-color: lightgray;
+    border: .2vw solid black;
+    text-decoration: none;
+    margin: 0 2vw;
+    padding: 0 1vw;
+}
+
+main.students_page h2 {
+    font-family: Ubuntu, Times, serif;
+    font-size: 2.3vw;
+    padding: 0 2vw;
+    margin-bottom: 5vh;
+}
+
+
 div.student_wrapper {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -183,11 +235,19 @@ a.student {
     transition: background-color .2s ease-in-out;
 }
 a.student:hover {
-    color: #089400;
+    color: red;
     background-color: lightgray;
 }
 
 p.update {
+    display: inline;
+    text-align: center;
+    font-family: Ubuntu, Times, serif;
+    font-size: 1.5vw;
+    color: #089400;
+}
+
+p.deleted {
     text-align: center;
     font-family: Ubuntu, Times, serif;
     font-size: 1.5vw;

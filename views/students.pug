@@ -9,12 +9,10 @@ block content
     main.students_page
         h2 Students
         p.info Click on student's name to edit and view detailed information
-        if updated
-            p.update Student record updated successfully
         if deleted
-            p.update Student record deleted successfully
+            p.deleted Student record deleted successfully
         div.student_wrapper
             each student in students
                 div.student_item
                     a.student(href=`/students/${student.id}`)= student.fname + " " + student.lname
-                    a.delete(href=`${student.id}/delete`) delete
+                    a.delete(href=`/${student.id}/delete`) Delete

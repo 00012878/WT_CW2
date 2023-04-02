@@ -4,7 +4,7 @@ block content
     header
         h2.title Student Database Management
         nav
-            a(href="/students") Home
+            a(href="/") Home
             a(href="/students") View All Students
             a(href="/add") Add Student
     main.update_page
@@ -87,7 +87,10 @@ block content
                     option(value="4" selected) Fourth Year    
             br
             br
-            button.add_btn Edit
-            a.delete(href=`/${student.id}/delete`) delete
-            if error
-                p.error [Error]: "First name" and "Last name" fields cannot be empty
+            div.update_page_btn_container
+                button.add_btn Edit
+                a.delete(href=`/${student.id}/delete`) Delete
+                if error
+                    p.error [Error]: "First name" and "Last name" fields cannot be empty
+                if updated
+                    p.update Student record updated successfully
