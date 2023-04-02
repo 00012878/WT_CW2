@@ -10,6 +10,14 @@ router.get("/", (req, res) => {
 	res.render("index.pug")
 })
 
+router.get("/api/v1/students", (req, res) => {
+	fs.readFile("./data/data.json", (err, data) => {
+		if (err) throw err
+		const students = JSON.parse(data)
+		res.json(students)
+	})
+})
+
 router.get("/add", (req, res) => {
 	res.render("add.pug")
 })
