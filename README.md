@@ -3,7 +3,7 @@
 This repository is an academic work (coursework) of the Web Technology module taught at Westminster International University in Tashkent in Business Information Systems course level 4.<br><br>
 
 **Repository:** https://github.com/00012878/WT_CW2<br>
-**Hosted on:** 
+**Hosted on:** https://aerial-obtainable-session.glitch.me/
 
 ## Project description
 Fully functioning web application where a user can perform CRUD operations.<br>
